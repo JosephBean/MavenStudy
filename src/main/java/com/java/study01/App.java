@@ -2,6 +2,7 @@ package com.java.study01;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -24,6 +25,9 @@ public class App {
 			// 5. 연결된 통로를 이용하여 SQL 실행하기
 			int result =  session.selectOne("test.test1");
 			System.out.println("Result : " + result);
+			
+			List<User> list = session.selectList("test.test2");
+			System.out.println(list.size());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

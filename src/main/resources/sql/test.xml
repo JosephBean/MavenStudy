@@ -6,4 +6,7 @@
   <select id="test1" resultType="Integer">
     select 1
   </select>
+  <select id="test2" resultType="com.java.study01.User">
+  	select * from users where 삭제여부 = 0
+  </select> 
 </mapper>
